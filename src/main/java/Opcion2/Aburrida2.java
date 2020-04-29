@@ -5,11 +5,7 @@ public class Aburrida2 extends Estado2 {
 
     private int minutosAburrimiento;
 
-    public Aburrida2() {
-        this.minutosAburrimiento = 0;
-    }
-
-    public void setMinutosAburrimiento(int minutosAburrimiento){
+    public Aburrida2(int minutosAburrimiento) {
         this.minutosAburrimiento = minutosAburrimiento;
     }
 
