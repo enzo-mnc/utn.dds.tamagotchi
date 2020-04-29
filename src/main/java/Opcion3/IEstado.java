@@ -1,3 +1,5 @@
+package Opcion3;
+
 public interface IEstado {
 
     void jugar(Mascota mascota);

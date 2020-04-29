@@ -1,3 +1,5 @@
+package Opcion3;
+
 public class Contenta implements IEstado{
 
     private int vecesJugadas;

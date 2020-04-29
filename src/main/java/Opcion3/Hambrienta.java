@@ -1,3 +1,5 @@
+package Opcion3;
+
 public class Hambrienta implements IEstado{
 
     @Override

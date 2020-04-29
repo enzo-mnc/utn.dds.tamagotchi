@@ -1,4 +1,4 @@
-import java.util.Objects;
+package Opcion3;
 
 public class Mascota {
 
