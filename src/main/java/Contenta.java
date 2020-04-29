@@ -1,12 +1,35 @@
 public class Contenta implements IEstado{
+
+    private int vecesJugadas;
+
+    public Contenta() {
+        this.vecesJugadas = 0;
+    }
+
     @Override
     public void jugar(Mascota mascota) {
-        mascota.setGradoDeFelicidad(mascota.getGradoDeFelicidad() + 2);
+
+        if(vecesJugadas <= 5) {
+            vecesJugadas++;
+            mascota.incrementarFelicidad(2);
+        }
+        else{
+            mascota.setEstado(new Hambrienta());
+        }
     }
 
     @Override
     public void comer(Mascota mascota) {
-        mascota.setGradoDeFelicidad(mascota.getGradoDeFelicidad() + 1);
+        mascota.incrementarFelicidad(1);
     }
 
+    @Override
+    public boolean puedoJugar(Mascota mascota) {
+        return true;
+    }
+
+    @Override
+    public String getNombre() {
+        return this.getClass().getSimpleName();
+    }
 }
