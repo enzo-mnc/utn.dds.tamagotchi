@@ -7,12 +7,12 @@ public class Mascota1 {
     private int gradoDeFelicidad;
 
     public Mascota1() {
-        this.estado = new Contenta1();
+        this.estado = new Contenta1(this);
         this.gradoDeFelicidad = 0;
     }
 
     public String getCondicion(){
-        return String.format("Estado: %s \nGrado de felicidad: %d",this.estado.getNombre(),this.getGradoDeFelicidad());
+        return String.format("Estado: %s \nGrado de felicidad: %d",this.estado.getNombre(this.estado),this.getGradoDeFelicidad());
     }
 
     public int getGradoDeFelicidad() {
@@ -28,16 +28,16 @@ public class Mascota1 {
     }
 
     public void jugar(){
-        if(this.estado.puedoJugar(this)){
-            this.estado.jugar(this);
+        if(this.estado.puedoJugar()){
+            this.estado.jugar();
         }
     }
 
     public void comer(){
-        estado.comer(this);
+        estado.comer();
     }
 
     public boolean puedoJugar(){
-        return estado.puedoJugar(this);
+        return estado.puedoJugar();
     }
 }
