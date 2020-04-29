@@ -9,7 +9,7 @@ public class Aburrida2 extends Estado2 {
         this.minutosAburrimiento = 0;
     }
 
-    public void setMinutosAburrimiento(int minutosAburrimiento) {
+    public void setMinutosAburrimiento(int minutosAburrimiento){
         this.minutosAburrimiento = minutosAburrimiento;
     }
 
