@@ -8,12 +8,9 @@ public class Contenta implements IEstado{
 
     @Override
     public void jugar(Mascota mascota) {
-
-        if(vecesJugadas <= 5) {
-            vecesJugadas++;
-            mascota.incrementarFelicidad(2);
-        }
-        else{
+        mascota.incrementarFelicidad(2);
+        vecesJugadas++;
+        if(vecesJugadas == 5) {
             mascota.setEstado(new Hambrienta());
         }
     }
