@@ -26,15 +26,23 @@ public class Main {
         System.out.println("Luego de comer estando hambrienta:");
         System.out.println(tamagotchi.getCondicion());
 
-        Estado2 aburrida = new Aburrida2();
-
-        tamagotchi.cambiarEstado(aburrida);
+        tamagotchi.cambiarEstado(new Aburrida2(0));
         System.out.println("Cambio estado a aburrida:");
         System.out.println(tamagotchi.getCondicion());
         System.out.println(tamagotchi.puedoJugar());
 
         tamagotchi.comer();
         System.out.println("Come estando aburrida hace menos de 80 min, no deberia hacer nada:");
+        System.out.println(tamagotchi.getCondicion());
+
+        tamagotchi.cambiarEstado(new Aburrida2(90));
+        tamagotchi.comer();
+        System.out.println("Come estando aburrida hace mas de 80 min:");
+        System.out.println(tamagotchi.getCondicion());
+
+        tamagotchi.cambiarEstado(new Aburrida2(0));
+        tamagotchi.jugar();
+        System.out.println("Juega estando aburrida:");
         System.out.println(tamagotchi.getCondicion());
 
 
