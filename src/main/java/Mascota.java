@@ -27,12 +27,9 @@ public class Mascota {
     }
 
     public void jugar(){
-            try {
-                this.estado.jugar(this);
-            }
-            catch (AccionInvalidaException e) {
-                System.out.println("La mascota no puede jugar");
-            }
+        if(this.estado.puedoJugar(this)){
+            this.estado.jugar(this);
+        }
     }
 
     public void comer(){
