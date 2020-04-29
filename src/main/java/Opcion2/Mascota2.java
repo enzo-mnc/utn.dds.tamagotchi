@@ -5,6 +5,10 @@ public class Mascota2 {
     private Estado2 estado;
     private int gradoDeFelicidad;
 
+    public Mascota2(Estado2 estado) {
+        this.estado = new Contenta2();
+        this.gradoDeFelicidad = 0;
+    }
 
     public void cambiarEstado(Estado2 estado) {
         this.estado = estado;
